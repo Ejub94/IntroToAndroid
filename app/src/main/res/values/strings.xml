@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Hyundai</string>
+    <string name="show_my_quote">Show My Quote</string>
+    <string name="open">Open</string>
+    <string name="please_type_a_number">Please type a number</string>
+    <string name="show_my_color">Show my Color</string>
+</resources>
