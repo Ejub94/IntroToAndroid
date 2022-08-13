@@ -7,7 +7,11 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.lifecycleScope
 import com.example.ejubsample.databinding.ActivityNewEjoBinding
+import kotlinx.coroutines.Dispatchers.Default
+import kotlinx.coroutines.Dispatchers.IO
+import kotlinx.coroutines.launch
 
 class NewEjoActivity : AppCompatActivity() {
 
@@ -37,17 +41,22 @@ class NewEjoActivity : AppCompatActivity() {
             }
 
         }
-        val myString = "Superman"
-        val myList = mutableListOf(1,2,3,4,5,6,7,8,9,10)
 
-        for (i in myList) {
-            Log.d("EJOO", myString)
-        }
-        val myTruth = true
+        lifecycleScope.launch(Default) {
+            val myString = "Superman"
+            val myList = mutableListOf(1,2,3,4,5,6,7,8,9,10)
 
-        while (myTruth) {
-            Log.d("EJOO", "ISTINA")
+            for (i in myList) {
+                Log.d("EJOO", myString)
+            }
+            val myTruth = true
+
+            while (myTruth) {
+                Log.d("EJOO", "ISTINA")
+            }
         }
+
+
 
 
 
